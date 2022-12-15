@@ -9,16 +9,13 @@ import biz.deinum.blog.context.springcontexts.SystemOutGreeter;
 @Configuration
 public class ApplicationConfig {
 
-
     @Bean
     public Person person() {
-        Person person = new Person();
-        person.setName("Marten Deinum");
-        return person;
+        return new Person("Marten Deinum");
     }
 
     @Bean
-    public SystemOutGreeter greeter() {
+    public Greeter greeter() {
         return new SystemOutGreeter();
     }
 }
